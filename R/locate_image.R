@@ -11,8 +11,7 @@
 #' @param bin_dir       A string for directory name of screenshot.exe on Win.
 #' @return        A numeric pair of xy location.
 #' @examples
-#' if(interactive()){
-#' 
+#' \dontrun{
 #' sc <- screenshot()
 #' if(sc != ""){
 #'   sc_image <- imager::load.image(sc)
@@ -28,11 +27,9 @@
 #'   plot(sc_image)
 #'   plot(needle)
 #'   plot(found)
-#'   \dontrun{
-#'     # usse `coner` to limit searching field
-#'     # `coner` can be used in Windows
-#'     pos <- locate_image(needle, corner = "bottom_left", center = FALSE)
-#'   }
+#'   # usse `coner` to limit searching field
+#'   # `coner` can be used in Windows
+#'   pos <- locate_image(needle, corner = "bottom_left", center = FALSE)
 #' }
 #' }
 #' 
