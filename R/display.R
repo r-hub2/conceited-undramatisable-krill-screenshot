@@ -8,7 +8,7 @@
 #' @param width,height  A integer to specify width or height of the corner.
 #' @return A numeric vector of length 4 representing the coordinates of the specified corner.
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' display_corner("top_left", 800, 800)
 #' }
 #'
@@ -32,7 +32,7 @@ display_corner <- function(corner = "bottom_left", width = 600, height = 600){
 #' @return A list with two elements, `width` and `height`, which are the width
 #'         and height of the display.
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' display_size()
 #' }
 #' 

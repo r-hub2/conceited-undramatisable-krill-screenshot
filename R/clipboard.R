@@ -8,7 +8,7 @@
 #' @return The path to the saved image file.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # Save the image from the clipboard to a file
 #' save_clipboard_image("clipboard_image.png")
 #' }
@@ -35,7 +35,7 @@ save_clipboard_image <- function(path = ""){
 #' @return The result of the system call.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' bitmap2png("path/to/image.bmp")
 #' }
 #'
@@ -62,7 +62,7 @@ bitmap2png <- function(path){
 #'
 #' @return Path to the temporary BMP file.
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' clipboard2bitmap()
 #' }
 #' @export
@@ -83,7 +83,7 @@ clipboard2bitmap <- function(){
 #' @param path The path to the file to be saved.
 #' @return Saves the image as a BMP file at the specified path.
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # Create an image data object
 #' image_data <- matrix(rnorm(100), ncol = 10)
 #' # Save the image as a BMP file
@@ -129,7 +129,7 @@ hex2little_endian <- function(x){
 #'
 #' @return A raw vector containing the image data.
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_clipboard_image()
 #' }
 #'
