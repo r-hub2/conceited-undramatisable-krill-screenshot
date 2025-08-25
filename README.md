@@ -4,6 +4,7 @@
 # screenshot
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The goal of screenshot is to take a screenshot easily and locate image
@@ -15,17 +16,19 @@ You can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
+  # install.packages("remotes")
 remotes::install_github("matutosi/screenshot")
+install.packages("screenshot")  # You can also install from CRAN:
 ```
 
-On Win OS, need to install screenshot.exe by `install_screenshot()`.
+On Windows, need to install screenshot.exe by `install_screenshot()`.
 This exe file is compiled from codes shown below.
 
 <https://superuser.com/questions/75614/take-a-screen-shot-from-command-line-in-windows#answer-1751844>
 
 ``` r
 library(screenshot)
+  # required on win
 install_screenshot()
   # if you want to install another directory
   # bin_dir <- "SET_YOUR DIRECTORY"
@@ -36,14 +39,6 @@ On Mac `screencapture` is usually available.
 
 On Linux GNOME desktop use `gnome-screenshot`. If not installed, run
 `sudo apt install gnome-screenshot`.
-
-<!-- 
-You can also install from CRAN:
-
-```r
-install.packages("screenshot")
-```
--->
 
 ## Example
 
@@ -76,6 +71,14 @@ plot(needle)
 plot(found)
 ```
 
+On Windows, clipboard image can be saved by `save_clipboard_image()`.
+
+``` r
+path_img <- "path_of_png_file"
+save_clipboard_image(path_img)
+shell.exec(path_img)
+```
+
 ## Caution (=0.9.0)
 
 - Automatically adjusted in 0.9.1 and latter.
@@ -91,7 +94,7 @@ KeyboardSimulator::mouse.click()
 
 You can see display scale in setting app as shown below.
 
-<img width="50%" src="./img/displaysettings.png">
+<img width="50%" src="./man/figures/displaysettings.png">
 
 ## Citation
 
